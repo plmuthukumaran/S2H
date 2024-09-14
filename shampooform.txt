@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Google Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h2>FILL THE DETAILS TO PLACE ORDER</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="510ee617-34cf-4de4-9dc8-100137c4ac7e">
+        
+        <div id="a">
+            <span>Name:</span>
+            <input type="text" name="Name" required>
+        </div>
+        
+        <div id="b">
+            <span>Rollno:</span>
+            <input type="text" name="RollNumber" required>
+        </div>
+        
+        <div id="c">
+            <span>Email:</span>
+            <input type="email" name="Email" required>
+        </div> 
+        
+        <div id="d">
+            <span>Product:</span>
+            <input type="text" name="Product" list="input">
+            <datalist id="input">
+                <option>Head & Shoulder </option>
+                <option>Clinic Plus</option>
+                <option>Meera Shampoo</option>
+                <option>Sunslik</option>
+                <option>Aloevera Hair Cleaner</option>
+                <option>Kesh Kanti(pantanjali)</option>
+       
+            </datalist>
+        </div>
+        
+        <div id="e">
+            <span>Flavour:</span>
+            <select name="Flavour">
+                <option>None</option>
+                <option></option>
+                <option>H&S(Sliky Black)</option>
+                <option>H&S(Smooth & Silky)</option>
+                <option>H&S(Cool Menthol)</option>
+                <option>H&S(Active Pretect)</option>
+                <option>H&S(Anti-Hairfall)</option>     
+                <option>C+(Strong & Long)</option>   
+                <option>C+(Naturally Strong)</option>
+                <option>P(Aloevera)</option>
+                <option>SS(Stunning black Shine)</option>
+                <option>SS(Luscious Think & Long)</option>           
+                <option>M(Anti Dandruff)</option>        
+                <option>M(Strong & Healthy)</option>        
+                <option>M(Hair Fall Care)</option>        
+            </select>
+        </div>
+<span>MRP:</span>
+        <input placeholder=""> 
+        
+        <div id="f">
+            <span>Quantity:</span>
+            <select name="Quantity">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+        </div>
+        
+        <div id="g">
+            Cash On Delivery
+            <input type="checkbox" required>
+        </div>
+        
+        <button type="submit">ORDER</button>
+    </form>
+    
+    <div style="margin-left: 700px; margin-bottom: 2%;">
+        <h3>YOUR NEEDS WILL REACH YOUR HANDS..</h3>
+    </div>
+</body>
+</html>

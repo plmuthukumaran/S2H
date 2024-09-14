@@ -1,0 +1,21 @@
+#a{
+margin-left:80px;
+}
+
+body {
+    background-image: url("order.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-left:60px;
+    padding:10px;
+}
+
+button {
+    margin-left: 80px;
+    width: 20%;
+    background: black;
+    color: white;
+    border-radius: 30px;
+    padding: 8px;
+    border: 1px solid white;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h2>FILL THE DETAILS TO PLACE ORDER</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="510ee617-34cf-4de4-9dc8-100137c4ac7e">
+        
+        <div id="a">
+            <span>Name:</span>
+            <input type="text" name="Name" required>
+        </div>
+        
+        <div id="b">
+            <span>Rollno:</span>
+            <input type="text" name="RollNumber" required>
+        </div>
+        
+        <div id="c">
+            <span>Email:</span>
+            <input type="Mobile Number" name="Mobile Number" required>
+        </div> 
+        
+        <div id="d">
+            <span>Product:</span>
+            <input type="text" name="Product" list="input">
+            <datalist id="input">
+                <option>Men's Fair & Lovely</option>
+                <option>Nivia  Men Face Wash</option>
+                <option>Pond's Face Wash</option>
+                <option>Pond's Face & Bread Wash</option>
+                <option>Fair & Handsome</option>
+            </datalist>
+        </div>
+        
+        <div id="e">
+            <span>Flavour:</span>
+            <select name="Flavour">
+                <option>None</option>
+                <option>F&L(Instant Brightness)</option>
+                <option>P(Activated Charcoal)</option>
+                <option>P(Energy Bright Fash Wash)</option>
+                <option>NIV(Oil Control)</option>     
+                <option>NIV(Charcoal)</option>   
+                <option>NIV(Dark Spot Reduction)</option>
+                <option>F&H(Instant Radiance Face Wash)</option>
+                <option>F&H(100% Oil Clear)</option>
+                <option>N(Deep Impact Intense Clean)</option>
+                       
+            </select>
+        </div>
+        <div id="m">
+             <span>MRP:</span>
+             <input> 
+        </div>
+        <div id="f">
+            <span>Quantity:</span>
+            <select name="Quantity">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+        </div>
+        
+        <div id="g">
+            Cash On Delivery
+            <input type="checkbox" required>
+        </div>
+        
+        <button type="submit">ORDER</button>
+    </form>
+    
+    <div style="margin-left: 700px; margin-bottom: 2%;">
+        <h3>YOUR NEEDS WILL REACH YOUR HANDS..</h3>
+    </div>
+</body>
+</html>
