@@ -3,6 +3,7 @@ margin-left:80px;
 }
 
 body {
+    background:white;
     background-image: url("order.jpg");
     background-repeat: no-repeat;
     background-position: right center;
