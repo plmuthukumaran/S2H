@@ -6,7 +6,7 @@ body {
     
     background:white;
     background-image: url("order.jpg");
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-position: right center;
     margin-top: 50px;;
     margin-left:150px;
