@@ -1,0 +1,61 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="S2H.css">
+<script>
+    function searchDocument() {
+        var searchTerm = document.getElementById("search").value.toLowerCase();
+        switch (searchTerm) {
+        
+        
+            case "hamam soap":
+                window.open("hamam.html");
+                break;
+            case "lifebuoy soap":
+                window.open("lifebuoy.html");
+                break;
+            case "cinthol soap":
+                window.open("cinthol.html");
+                break;
+            case "medimix soap":
+                window.open("medimix.html");
+                break; 
+           
+    
+
+            default:
+                alert("Product not found.");
+        }
+    }
+</script>
+</head>
+<body>
+<form onsubmit="event.preventDefault(); searchDocument();">
+    <input id="search" type="search" placeholder="Search" list="input">
+    <button type="submit">Search</button>
+    <datalist id="input">
+        <option>cinthol</option>
+        <option>Hamam Soap</option>
+        <option>Lifebuoy Soap</option>
+        <option>Medimix</option>
+    
+
+        
+    </datalist>
+</form>
+<table>
+        <tr>
+          <th><a href="hamam.html"><img src="hamam.jpg" width="210px" height="210px"></a></th>
+          <th><a href="lifebuoy.html"><img src="lifebuoy.jpg" width="210px" height="210px"></a></th>
+          <th><a href="cinthol.html"><img src="cinthol.jpg" width="210px" height="210px"></a></th>
+          <th><a href="medimix.html"><img src="medimix.jpg" width="210px" height="210px"></a></th>
+          
+        </tr>     
+        <tr>
+            <th>Hamam Soap</th>
+            <th>Lifebuoy Soap</th>
+            <th>Cinthol Soap</th>
+            <th>Medimix Soap</th>
+           
+        </tr>
+    </table>
+    </body>
+</html>

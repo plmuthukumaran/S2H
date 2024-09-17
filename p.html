@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="S2H.css">
+    <script>
+        function searchDocument() {
+            var searchTerm = document.getElementById("search").value.toLowerCase();
+            switch (searchTerm) {
+            
+           
+                case "rorito fasty gel":
+                    window.open("fasty.html");
+                    break;
+                case "teen gel":
+                    window.open("teen.html");
+                    break;
+                case "trimax":
+                    window.open("trimax.html");
+                    break;
+                case "doms everyday":
+                    window.open("everyday.html");
+                    break;
+                case "stylish ball point pen":
+                    window.open("stylish.html");
+                    break;         
+                case "unomax pen:
+                    window.open("unomax.html");
+                    break;
+                default:
+                    alert("Product not found.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); searchDocument();">
+        <input id="search" type="search" placeholder="Search" list="input">
+        <button type="submit">Search</button>
+        <datalist id="input">
+      
+            <option>Doms everyday</option>            
+            <option>Rorito fasty gel</option>
+            <option>Stylish Ball Point Pen</option>
+            <option>Teen Gel</option>
+            <option>Trimax</option>
+            <option>Unomax Pen</option> 
+            
+        </datalist>
+    </form>
+
+    <table>
+        <tr>
+            <th><a href="fasty.html"><img src="fasty.jpg" width="210px" height="210px"></a></th>
+            <th><a href="teen.html"><img src="teen.jpg" width="210px" height="210px"></a></th>
+            <th><a href="everyday.html"><img src="everyday1.jpg" width="210px" height="210px"></a></th>
+            <th><a href="stylish.html"><img src="stylish.jpg" width="210px" height="210px"></a></th>
+            <th><a href="trimax.html"><img src="trimax.jpg" width="210px" height="210px"></a></th>
+        </tr>
+        <tr>
+            <th>Rorito fasty gel</th>
+            <th>Teen gel</th>
+            <th>Everyday Ball Point Pen</th>
+            <th>Stylish Ball Point Pen</th>
+            <th>Trimax</th>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th><a href="unomax.html"><img src="unomax.jpg" width="210px" height="210px"></a></th>
+        </tr>
+        <tr>
+            <th>Unomax</th>
+        </tr>
+    </table>
+    </body>
+    </html>

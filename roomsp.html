@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="S2H.css">
+    <script>
+        function searchDocument() {
+            var searchTerm = document.getElementById("search").value.toLowerCase();
+            switch (searchTerm) {
+                case "aer Room Spray":
+                    window.open("aer.html");
+                    break; 
+                case "Odonil Room Spray":
+                    window.open("odonil.html");
+                    break;
+            
+
+                default:
+                    alert("Product not found.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); searchDocument();">
+        <input id="search" type="search" placeholder="Search" list="input">
+        <button type="submit">Search</button>
+        <datalist id="input">
+            <option>aer Room spray</option>
+            <option>Odonil Room Spray</option>
+
+            
+        </datalist>
+    <table>
+    <tr>
+      
+     <th><a href="aer.html"><img src="aer.jpg" width="210px" height="210px"></a></th>
+      <th><a href="odonil.html"><img src="odonil.jpg" width="210px" height="210px"></a></th>
+    </tr>     
+    <tr>
+      
+        <th>aer Room Spray</th>
+        <th>Odonil Room Spray</th>
+      
+        
+
+    </tr>
+</table>

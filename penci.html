@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="S2H.css">
+    <script>
+        function searchDocument() {
+            var searchTerm = document.getElementById("search").value.toLowerCase();
+            switch (searchTerm) {
+                case "apsara pencil":
+                    window.open("apsara pencil.html");
+                    break;
+                    case "natraj pencil":
+                    window.open("apsara pencil.html");
+                    break;
+
+
+
+
+
+                default:
+                    alert("Product not found.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); searchDocument();">
+        <input id="search" type="search" placeholder="Search" list="input">
+        <button type="submit">Search</button>
+        <datalist id="input">
+           
+            <option>Apsara Pencil</option>
+            <option>Natraj Pencil</option>
+</datalist>
+</form>
+    <table>
+        <tr>
+              <th><a href="apsara.html"><img src="apsara penci.jpg" width="210px" height="210px"></a></th>
+            <th><a href="natraj.html"><img src="natraj pencil.jpg" width="210px" height="210px"></a></th>
+            
+            
+        </tr>
+  <tr>
+           
+            <th>Apsara Pencil</th>
+            <th>Natraj Pencil</th>
+
+            
+        </tr>
+    </table>
+    </body>
+    </html>

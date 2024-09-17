@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="S2H.css">
+    <script>
+        function searchDocument() {
+            var searchTerm = document.getElementById("search").value.toLowerCase();
+            switch (searchTerm) {
+
+
+        case "men's fair & lovely":
+                    window.open("fair.html");
+                    break;
+                case "nivea men's face wash":
+                    window.open("nivea.html");
+                    break; 
+                case "pond's face wash":
+                    window.open("ponds.html");
+                    break;
+        
+        case "nivea face and bread wash":
+                    window.open("niveafb.html");
+                    break;
+                case "fair & handsome":
+                    window.open("fhandsome.html");
+                    break; 
+               
+
+                default:
+                    alert("Product not found.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); searchDocument();">
+        <input id="search" type="search" placeholder="Search" list="input">
+        <button type="submit">Search</button>
+        <datalist id="input">
+            <option>Men's Fair & Lovely</option>
+            <option>Pond's Face Wash</option>
+            <option>Nivea-Men Face Wash</option>
+            <option>Fair & Handsome</option>
+            <option>Nivea-Men Face & Bread Wash</option>
+
+</datalist>
+    </form>
+
+ <table>
+        <tr>
+          <th><a href="fair.html"><img src="fair.jpg" width="210px" height="210px"></a></th>
+          <th><a href="ponds.html"><img src="ponds.jpg" width="210px" height="210px"></a></th>
+          <th><a href="nivea.html"><img src="nivea.jpg" width="210px" height="210px"></a></th>
+          <th><a href="fhandsome.html"><img src="fhandsome.jpg" width="210px" height="210px"></a></th>
+          <th><a href="niveafb.html"><img src="niveafb.jpg" width="210px" height="210px"></a></th>
+          
+
+        </tr>     
+        <tr>
+           
+            <th>Men's Fair & Lovely</th>
+            <th>Pond's Face Wash</th>
+            <th>Nivea-Men Face Wash</th>
+            <th>Fair & Handsome</th>
+            <th>Nivea-Men Face & Bread Wash</th>
+
+        </tr>
+    </table>
+    
+
+</body>
+</html>

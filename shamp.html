@@ -1,0 +1,67 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="S2H.css">
+<script>
+    function searchDocument() {
+        var searchTerm = document.getElementById("search").value.toLowerCase();
+        switch (searchTerm) {
+        
+        
+            case "Head & Shoulders":
+                window.open("headshampoo.html");
+                break;
+            case "clinic plus":
+                window.open("clinic.html");
+                break;
+            case "meera":
+                window.open("meera.html");
+                break;
+            case "sunsilk":
+                window.open("sunsilk.html");
+                break; 
+                case "aloevera":
+                window.open("aloevera.html");
+                break; 
+           
+    
+
+            default:
+                alert("Product not found.");
+        }
+    }
+</script>
+</head>
+<body>
+<form onsubmit="event.preventDefault(); searchDocument();">
+    <input id="search" type="search" placeholder="Search" list="input">
+    <button type="submit">Search</button>
+    <datalist id="input">
+        <option>Head & Shoulders</option>
+        <option>Clinic Plus</option>
+        <option>Meera</option>
+        <option>Sunslik</option>
+        <option>Aloevera</option>
+    
+
+        
+    </datalist>
+</form>
+<table>
+    <tr>
+      <th><a href="headshampoo.html"><img src="headshampoo.jpg" width="210px" height="210px"></a></th>
+      <th><a href="clinic.html"><img src="clinic.jpg" width="210px" height="210px"></a></th>
+      <th><a href="meera.html"><img src="meera.jpg" width="210px" height="210px"></a></th>
+      <th><a href="sunsilk.html"><img src="sunslik.jpg" width="210px" height="210px"></a></th>
+      <th><a href="aloevera.html"><img src="aloevera.jpg" width="210px" height="210px"></a></th>
+
+    </tr>     
+    <tr>
+        <th>Head & Shoulders</th>
+        <th>Clinic Plus</th>
+        <th>Meera</th>
+        <th>Sunslik</th>
+        <th>Aloevera</th>
+    </tr>
+</table>
+<table>
+    </body>
+</html>
