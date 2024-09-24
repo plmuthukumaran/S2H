@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Form</title>
+    <title>pens</title>
     <link rel="stylesheet" href="form.css">
+ <script>
+        function setMobileNo() {
+            const nameInput = document.getElementById('name').value;
+            const mobileNoInput = document.getElementById('mobileNo');
+
+            
+            const mobileNumbers = {
+                "Muthu V":"9876543210",
+                "Muthukumaran P": "9345546224",
+                "Muhtupandi": "8765432109",
+
+            };
+
+          
+            mobileNoInput.value = mobileNumbers[nameInput] || "";
+        }
+    </script>
 </head>
 <body>
     <h2>FILL THE DETAILS TO PLACE ORDER</h2>
@@ -13,23 +30,25 @@
         
         <div id="a">
             <span>Name:</span>
-            <input type="text" name="first_name" required>
+            <input type="text" id="name" name="Name" list="input" oninput="setMobileNo()">
+            <datalist id="input">
+            <option>Muthu V</option>
+            <option>Muthukumaran P</option>
+            <option>Muthupandi</option>
+</datalist>
         </div>
         
         <div id="b">
-            <span>Rollno:</span>
-            <input type="text" name="rollnumber" required>
+            <span>MobileNo:</span>
+            <input type="text" name="MobileNumber" id="mobileNo" required>
         </div>
         
-        <div id="c">
-            <span>Email:</span>
-            <input type="email" name="email" required>
-        </div> 
+
         
         <div id="d">
             <span>Product:</span>
-            <input type="text" name="product" list="input" required>
-            <datalist id="input">
+            <input type="text" name="product" list="productlist" required>
+            <datalist id="productlist">
                 
                 <option>Doms everyday</option>                             
                 <option>Rorito fasty gel</option>

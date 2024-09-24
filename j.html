@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-fill Roll Number</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" oninput="setRollNo()">
+
+        <label for="rollNo">Roll Number:</label>
+        <input type="text" id="rollNo" name="rollNo" readonly>
+    </form>
+
+    <script>
+        function setRollNo() {
+            const nameInput = document.getElementById('rollNo').value;
+            const rollNoInput = document.getElementById('mobileNo');
+
+            // Predefined mapping for names and roll numbers
+            const rollNoNumbers = {
+                "John": "1001",
+                "Jane": "1002",
+                "Alice": "1003",
+                "Bob": "1004"
+            };
+
+            // Set roll number based on the entered name
+            rollNoInput.value = rollNumbers[nameInput] || "Unknown";
+        }
+    </script>
+</body>
+</html>

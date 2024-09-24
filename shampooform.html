@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Form</title>
     <link rel="stylesheet" href="form.css">
+    <script>
+        function setMobileNo() {
+            const nameInput = document.getElementById("name").value;
+            const mobilenoInput = document.getElementById("mobileNo");
+            const fname = {
+                "Muthu V": "9876543210",
+                "Muthukumaran P": "9345546224",
+                "Muthupandi": "8765432109"
+            };
+            mobilenoInput.value = fname[nameInput] || "";
+        }
+
+
+            function setMrp() {
+            const FlavourInput = document.getElementById('Flavour').value;
+            const mrpInput = document.getElementById('MrpInput');
+
+
+
+            const MRP = {
+                "H&S(Sliky Black)": ["82", "205"],
+                "H&S(Smooth & Silky)": ["82", "205"],
+                "H&S(Cool Menthol)": ["82", "205"],
+                "H&S(Active Protect)": ["205"],
+                "C+(Strong & Long)": ["57", "126", "295"],
+                "C+(Naturally Strong)": ["68", "154", "345"],
+                "P(Aloevera)": ["120"],
+                "SS(Stunning black Shine)": ["68", "154", "345"],
+                "SS(Luscious Think & Long)": ["68", "154", "345"],
+                "M(Anti Dandruff)": ["79", "205"],
+                "M(Strong & Healthy)": ["180"],
+                "M(Hair Fall Care)": ["72", "180"]
+            };
+            const prices = MRP[FlavourInput] || ["", ""];
+            mrpInput.value = prices.join(" / "); 
+        }
+    </script>
 </head>
 <body>
     <h2>FILL THE DETAILS TO PLACE ORDER</h2>
@@ -13,43 +50,40 @@
         
         <div id="a">
             <span>Name:</span>
-            <input type="text" name="Name" required>
+            <input type="text" name="Name" id="name" list="nameinput" oninput="setMobileNo()" required>
+            <datalist id="nameinput">
+                <option>Muthu V</option>
+                <option>Muthukumaran P</option>
+                <option>Muthupandi</option>
+            </datalist>
         </div>
         
         <div id="b">
-            <span>Rollno:</span>
-            <input type="text" name="RollNumber" required>
+            <span>MobileNo:</span>
+            <input type="text" name="MobileNumber" id="mobileNo" required>
         </div>
-        
-        <div id="c">
-            <span>Email:</span>
-            <input type="Mobile Number" name="Mobile Number" required>
-        </div> 
         
         <div id="d">
             <span>Product:</span>
             <input type="text" name="Product" list="input">
             <datalist id="input">
-                <option>Head & Shoulder </option>
+                <option>Head & Shoulder</option>
                 <option>Clinic Plus</option>
                 <option>Meera Shampoo</option>
-                <option>Sunslik</option>
+                <option>Sunsilk</option>
                 <option>Aloevera Hair Cleaner</option>
-                <option>Kesh Kanti(pantanjali)</option>
-       
+                <option>Kesh Kanti (Patanjali)</option>
             </datalist>
         </div>
         
         <div id="e">
             <span>Flavour:</span>
-            <select name="Flavour">
-                <option>None</option>
-                <option></option>
+            <select name="Flavour" oninput="setMrp()" id="Flavour" required>
+                <option value="">None</option>
                 <option>H&S(Sliky Black)</option>
                 <option>H&S(Smooth & Silky)</option>
                 <option>H&S(Cool Menthol)</option>
-                <option>H&S(Active Pretect)</option>
-                <option>H&S(Anti-Hairfall)</option>     
+                <option>H&S(Active Protect)</option>
                 <option>C+(Strong & Long)</option>   
                 <option>C+(Naturally Strong)</option>
                 <option>P(Aloevera)</option>
@@ -60,10 +94,12 @@
                 <option>M(Hair Fall Care)</option>        
             </select>
         </div>
+
         <div id="m">
-             <span>MRP:</span>
-             <input> 
+            <span>MRP:</span>
+            <input id="MrpInput" name="MRP" placeholder="Enter Price" required> 
         </div>
+
         <div id="f">
             <span>Quantity:</span>
             <select name="Quantity">
@@ -72,8 +108,6 @@
                 <option>3</option>
             </select>
         </div>
-        
-        
         
         <button type="submit">ORDER</button>
     </form>
